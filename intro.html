@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Equity Marvels</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      background-color: transparent;
+      padding: 20px 40px;
+      position: absolute;
+      width: 100%;
+      z-index: 10;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: white;
+      font-size: 1.8rem;
+    }
+
+    .nav-link {
+      color: white !important;
+      margin: 0 10px;
+    }
+
+    .hero {
+      background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://wpblogassets.paytm.com/paytmblog/uploads/2023/09/Blog_Paytm_What-Is-a-Long-Term-Investment-and-What-Are-Its-Benefits-800x500.jpg') no-repeat center center/cover;
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+
+    .typed-text {
+      font-size: 1.2rem;
+      margin: 20px 0;
+      color: #ffd54f;
+      min-height: 30px;
+    }
+
+    .btn-warning {
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      border: none;
+      font-weight: 600;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn-warning:hover {
+      background-color: #ff9900;
+      transform: scale(1.05);
+    }
+
+    .info-section {
+      padding: 80px 20px;
+      background-color: white;
+    }
+
+    .info-img {
+      background-color: #e0e0e0;
+      height: 300px;
+      width: 100%;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #777;
+      font-size: 1.2rem;
+    }
+
+    .info-text {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .info-text.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      background: #111;
+      color: #bbb;
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+
+      .navbar {
+        padding: 10px 20px;
+      }
+    }
+    .my-img
+    {
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">
+      <img src="img1.png" alt=""class="img-fluid my-img">
+    </a>
+    <div class="ms-auto">
+      
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <h1>Equity Marvels
+
+    </h1>
+    <div class="typed-text" id="typed"></div>
+    <button class="btn btn-warning mt-3" onclick="startRedirect()">Get Started</button>
+    <p class="mt-4">“Gold is the money of kings, silver the money of peasants,<br>but wax is dust is the money of slaves”</p>
+  </section>
+
+  <!-- Info Section -->
+  <section class="info-section" id="about">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="info-img" id="imageBox">
+            <img src="girl.jpg" alt=""class="img-fluid">
+          </div>
+        </div>
+        <div class="col-md-6 info-text" id="textReveal">
+          <h2>About Equity Marvels</h2>
+          <p>We help you build a strong and secure financial portfolio with the wisdom of gold and the agility of modern markets.</p>
+          <a href="#hero" class="btn btn-warning mt-3">Back to Top</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Equity Marvels. All Rights Reserved.
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Typing Effect
+    const text = "Your Trusted Partner In Investment Success";
+    const typedEl = document.getElementById("typed");
+    let i = 0;
+    function typeText() {
+      if (i < text.length) {
+        typedEl.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeText, 50);
+      }
+    }
+    typeText();
+
+    // Button click redirect
+    function startRedirect() {
+      // alert("Welcome to Equity Marvels!");
+      window.location.href = "index.html";
+    }
+
+    // Scroll Reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+    observer.observe(document.getElementById('textReveal'));
+  </script>
+
+</body>
+</html>
