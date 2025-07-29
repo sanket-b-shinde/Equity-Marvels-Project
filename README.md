@@ -1,1 +1,1 @@
-# This is my Equity Marvels Website code
+# This is my Equity Marvels Website
