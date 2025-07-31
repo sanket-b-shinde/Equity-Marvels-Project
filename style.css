@@ -527,3 +527,49 @@ body {
   color: #999;
   font-size: 1.2rem;
 }
+
+section {
+  background-color: #ffffff;
+  position: relative;
+  top: 150px;
+}
+
+h2 {
+  color: #1a1a1a;
+}
+
+.border-primary {
+  border-color: #5ea0ff !important;
+}
+.cards1
+{
+box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+box-sizing: border-box;
+transition: transform 0.3s ease-in-out;
+}
+
+.cards1:hover {
+  transform: scale(1.05);     /* Zoom in slightly */
+  transition: transform 0.3s ease-in-out;
+}
+.custom-card {
+  border-radius: 16px;                      /* Rounded corners */
+  margin: 15px;                             /* Space between cards */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-card:hover {
+  transform: scale(1.05);                  /* Zoom effect on hover */
+}
+.cards3
+{
+  position: relative;
+ top: 100px;
+}
+.img-set
+{
+  position: relative;
+  top:100px;
+  border-radius: 10px;
+}
